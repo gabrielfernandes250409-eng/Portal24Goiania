@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🔴 URGENTE: O que esse homem fez em plena luz do dia CHOCOU o Brasil inteiro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --red: #cc0000; --dark: #111; --light: #f5f3ee; --gray: #888; }
+    body { font-family: 'Merriweather', serif; background: var(--light); color: var(--dark); }
+
+    .top-bar { background: var(--red); color: #fff; font-family: 'Oswald', sans-serif; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 6px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .live { display: flex; align-items: center; gap: 6px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: #fff; animation: blink 1s infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
+
+    header { background: var(--dark); padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 4px solid var(--red); }
+    .logo { font-family: 'Oswald', sans-serif; font-size: 32px; font-weight: 700; color: #fff; letter-spacing: -1px; }
+    .logo span { color: var(--red); }
+    .logo small { font-size: 10px; color: var(--gray); display: block; letter-spacing: 3px; text-transform: uppercase; }
+
+    nav { background: #1a1a1a; display: flex; border-bottom: 2px solid #333; overflow-x: auto; }
+    nav a { font-family: 'Oswald', sans-serif; font-size: 13px; color: #ccc; text-decoration: none; padding: 10px 18px; text-transform: uppercase; letter-spacing: 0.5px; border-right: 1px solid #2a2a2a; white-space: nowrap; transition: background 0.15s, color 0.15s; }
+    nav a:hover, nav a.ativo { background: var(--red); color: #fff; }
+
+    .breaking { background: var(--red); color: #fff; font-family: 'Oswald', sans-serif; padding: 10px 20px; display: flex; align-items: center; gap: 16px; overflow: hidden; }
+    .breaking-tag { background: #fff; color: var(--red); font-weight: 700; font-size: 12px; padding: 3px 10px; letter-spacing: 1px; white-space: nowrap; flex-shrink: 0; }
+    .breaking-text { font-size: 14px; letter-spacing: 0.5px; white-space: nowrap; animation: scroll-text 25s linear infinite; }
+    @keyframes scroll-text { 0%{transform:translateX(100vw)} 100%{transform:translateX(-300%)} }
+
+    .container { max-width: 980px; margin: 0 auto; padding: 24px 16px; display: grid; grid-template-columns: 1fr 280px; gap: 28px; }
+
+    .article-category { font-family: 'Oswald', sans-serif; color: var(--red); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+    h1 { font-family: 'Oswald', sans-serif; font-size: clamp(24px, 4vw, 38px); font-weight: 700; line-height: 1.15; margin-bottom: 14px; }
+    .subtitle { font-size: 16px; color: #444; line-height: 1.6; border-left: 4px solid var(--red); padding-left: 14px; margin-bottom: 20px; font-style: italic; }
+    .meta { font-family: 'Oswald', sans-serif; font-size: 12px; color: var(--gray); letter-spacing: 0.5px; margin-bottom: 20px; display: flex; gap: 16px; flex-wrap: wrap; }
+
+    .video-bait { position: relative; width: 100%; aspect-ratio: 16/9; background: #000; cursor: pointer; overflow: hidden; margin-bottom: 8px; border: 3px solid var(--dark); }
+    .video-bait img { width: 100%; height: 100%; object-fit: cover; opacity: 0.72; transition: opacity 0.2s; }
+    .video-bait:hover img { opacity: 0.55; }
+    .blur-zone { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(0,0,0,0.55) 0%, transparent 40%, transparent 60%, rgba(0,0,0,0.45) 100%); pointer-events: none; }
+    .censored-label { position: absolute; top: 10px; left: 10px; background: var(--red); color: #fff; font-family: 'Oswald', sans-serif; font-size: 11px; letter-spacing: 1.5px; padding: 3px 10px; text-transform: uppercase; }
+    .age-badge { position: absolute; top: 10px; right: 10px; background: #000; color: #ffc107; font-family: 'Oswald', sans-serif; font-size: 14px; font-weight: 700; padding: 4px 10px; border: 2px solid #ffc107; }
+    .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 76px; height: 76px; border-radius: 50%; background: rgba(204,0,0,0.92); display: flex; align-items: center; justify-content: center; transition: transform 0.2s, background 0.2s; box-shadow: 0 4px 28px rgba(0,0,0,0.6); animation: pulse-play 2s infinite; }
+    @keyframes pulse-play { 0%,100%{box-shadow:0 0 0 0 rgba(204,0,0,0.6)} 50%{box-shadow:0 0 0 14px rgba(204,0,0,0)} }
+    .video-bait:hover .play-btn { transform: translate(-50%,-50%) scale(1.13); background: #aa0000; }
+    .play-btn svg { fill: #fff; width: 34px; height: 34px; margin-left: 5px; }
+
+    .views-bar { background: #222; color: #aaa; font-family: 'Oswald', sans-serif; font-size: 11px; padding: 6px 12px; display: flex; justify-content: space-between; margin-bottom: 20px; letter-spacing: 0.5px; }
+    .views-bar span { color: #fff; }
+
+    .age-warning { background: #fff3cd; border: 1px solid #ffc107; border-left: 5px solid #ffc107; padding: 12px 16px; font-size: 13px; color: #664d03; margin-bottom: 20px; display: flex; align-items: flex-start; gap: 10px; }
+    .age-warning strong { font-family: 'Oswald', sans-serif; font-size: 14px; }
+
+    .article-body p { font-size: 15px; line-height: 1.85; color: #222; margin-bottom: 18px; }
+    .highlight-box { background: #fff; border-left: 5px solid var(--red); padding: 16px 20px; margin: 24px 0; font-size: 17px; font-style: italic; color: #333; box-shadow: 2px 2px 0 #ddd; }
+
+    .share-bar { display: flex; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+    .share-btn { font-family: 'Oswald', sans-serif; font-size: 12px; letter-spacing: 0.5px; padding: 8px 16px; border: none; cursor: pointer; color: #fff; text-transform: uppercase; }
+    .share-btn.wpp { background: #25d366; }
+    .share-btn.face { background: #1877f2; }
+    .share-btn.tw { background: #1da1f2; }
+
+    .cta-block { background: var(--dark); padding: 24px; text-align: center; margin: 28px 0; }
+    .cta-block p { font-family: 'Oswald', sans-serif; color: #aaa; font-size: 13px; letter-spacing: 1px; margin-bottom: 14px; }
+    .cta-btn { display: inline-block; background: var(--red); color: #fff; font-family: 'Oswald', sans-serif; font-size: 20px; font-weight: 700; letter-spacing: 1px; padding: 16px 40px; text-decoration: none; text-transform: uppercase; cursor: pointer; border: none; animation: pulse-btn 2s infinite; transition: transform 0.15s; }
+    @keyframes pulse-btn { 0%,100%{box-shadow:0 0 0 0 rgba(204,0,0,0.5)} 50%{box-shadow:0 0 0 14px rgba(204,0,0,0)} }
+    .cta-btn:hover { transform: scale(1.04); background: #aa0000; }
+
+    .sidebar { display: flex; flex-direction: column; gap: 20px; }
+    .sidebar-title { font-family: 'Oswald', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #fff; background: var(--dark); padding: 8px 14px; }
+    .sidebar-block { border: 1px solid #ddd; overflow: hidden; }
+    .sidebar-item { display: flex; gap: 10px; padding: 10px; border-bottom: 1px solid #eee; cursor: pointer; transition: background 0.15s; text-decoration: none; }
+    .sidebar-item:last-child { border-bottom: none; }
+    .sidebar-item:hover { background: #f0ebe3; }
+    .sidebar-item img { width: 72px; height: 56px; object-fit: cover; flex-shrink: 0; }
+    .sidebar-item-text { font-size: 12px; line-height: 1.4; color: #222; font-family: 'Oswald', sans-serif; }
+    .sidebar-item-cat { font-size: 10px; color: var(--red); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
+
+    .comments { margin-top: 32px; }
+    .comment-title { font-family: 'Oswald', sans-serif; font-size: 18px; border-bottom: 3px solid var(--dark); padding-bottom: 8px; margin-bottom: 16px; }
+    .comment { display: flex; gap: 12px; margin-bottom: 16px; }
+    .comment-avatar { width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0; overflow: hidden; }
+    .comment-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .comment-body { flex: 1; }
+    .comment-name { font-family: 'Oswald', sans-serif; font-size: 13px; font-weight: 700; margin-bottom: 3px; }
+    .comment-time { font-size: 10px; color: var(--gray); margin-bottom: 5px; }
+    .comment-text { font-size: 13px; line-height: 1.5; color: #333; }
+
+    footer { background: var(--dark); color: #555; font-size: 11px; text-align: center; padding: 20px; margin-top: 40px; font-family: 'Oswald', sans-serif; letter-spacing: 0.5px; }
+
+    @media(max-width:700px){ .container { grid-template-columns: 1fr; } .sidebar { display: none; } }
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="live"><div class="dot"></div> Ao vivo agora</div>
+  <div>Quinta-feira, 02 de Abril de 2026</div>
+</div>
+
+<header>
+  <div class="logo">PORTAL<span>24H</span><small>Notícias que o mainstream esconde</small></div>
+  <div style="font-family:'Oswald',sans-serif;color:#aaa;font-size:12px;text-align:right">🌡️ 31°C &nbsp;|&nbsp; São Paulo<br><span style="color:var(--red)">■</span> AO VIVO</div>
+</header>
+
+<nav>
+  <a href="#" class="ativo">Início</a>
+  <a href="#">Brasil</a>
+  <a href="#">Polícia</a>
+  <a href="#">Polêmicas</a>
+  <a href="#">Vídeos Chocantes</a>
+  <a href="#">Internacional</a>
+  <a href="#">Entretenimento</a>
+</nav>
+
+<div class="breaking">
+  <div class="breaking-tag">🔴 Urgente</div>
+  <div class="breaking-text">CENAS FORTES • Vídeo vazado choca a internet brasileira • Mais de 4 milhões de visualizações em 24 horas • ASSISTA ANTES QUE APAGUEM • CENAS FORTES • Vídeo vazado choca a internet brasileira •</div>
+</div>
+
+<div class="container">
+  <main>
+    <div class="article-category">⚠️ Vídeos Chocantes · Exclusivo</div>
+    <h1>🔴 CHOCANTE: Câmeras flagraram tudo e o vídeo está varrendo a internet — autoridades pedem que NÃO seja compartilhado</h1>
+    <div class="subtitle">Imagens perturbadoras foram gravadas por testemunhas e vazaram nas últimas horas. O conteúdo é tão impactante que plataformas digitais já tentaram remover — mas não conseguiram. <strong>VEJA ENQUANTO AINDA ESTÁ NO AR.</strong></div>
+    <div class="meta">
+      <span>✍️ Redação Portal24H</span>
+      <span>🕐 Há 23 minutos</span>
+      <span>👁️ 847.392 visualizações</span>
+      <span>💬 3.241 comentários</span>
+    </div>
+
+    <div class="share-bar">
+      <button class="share-btn wpp" onclick="ir()">📲 WhatsApp</button>
+      <button class="share-btn face" onclick="ir()">👍 Facebook</button>
+      <button class="share-btn tw" onclick="ir()">🐦 Twitter</button>
+    </div>
+
+    <div class="video-bait" onclick="ir()">
+      <img src="https://picsum.photos/seed/notbait88/900/506" alt="thumbnail" />
+      <div class="blur-zone"></div>
+      <div class="censored-label">🔞 CONTEÚDO RESTRITO</div>
+      <div class="age-badge">+18</div>
+      <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+
+    <div class="views-bar">
+      <span>▶ <span>4.127.884</span> visualizações</span>
+      <span>🔥 VIRAL AGORA</span>
+      <span>⏱ 3:47</span>
+    </div>
+
+    <div class="age-warning">⚠️ <div><strong>AVISO DE CONTEÚDO SENSÍVEL</strong><br>As imagens a seguir podem conter cenas perturbadoras. O portal não se responsabiliza por reações emocionais geradas pelo vídeo.</div></div>
+
+    <div class="article-body">
+      <p>O vídeo que está <strong>chocando o Brasil inteiro</strong> foi gravado por um transeunte na última semana e rapidamente se espalhou pelas redes sociais. Em poucas horas, o conteúdo acumulou mais de <strong>4 milhões de visualizações</strong> e gerou uma onda de reações no país.</p>
+      <p>Segundo testemunhas presentes no local, ninguém esperava que aquilo fosse acontecer em plena luz do dia. <strong>"Eu nunca vi nada assim na minha vida"</strong>, declarou uma das pessoas que acompanhou a cena ao vivo, sem querer se identificar.</p>
+      <div class="highlight-box">"Quando vi o vídeo, não acreditei que era real. Mas é. E é ainda mais assustador do que parece nos prints."<br><br><small>— Comentário mais curtido no Twitter, com 89 mil likes</small></div>
+      <p>Autoridades locais já foram acionadas e abriram uma investigação para apurar as circunstâncias do ocorrido. No entanto, até o momento desta publicação, <strong>nenhum suspeito foi identificado</strong> e o caso segue em aberto.</p>
+      <p>Plataformas como YouTube e Instagram tentaram remover o conteúdo alegando violação de termos de uso, mas cópias continuam circulando livremente. Especialistas em segurança digital alertam que o vídeo pode conter informações sensíveis que colocam pessoas em risco.</p>
+      <p>A repercussão foi tão grande que o assunto chegou aos trending topics do Twitter Brasil, onde permanece desde ontem à noite. Famosos e influenciadores também reagiram, muitos em estado de choque após assistirem às imagens.</p>
+    </div>
+
+    <div class="cta-block">
+      <p>⚠️ O VÍDEO PODE SER REMOVIDO A QUALQUER MOMENTO</p>
+      <button class="cta-btn" onclick="ir()">▶ ASSISTIR O VÍDEO COMPLETO</button>
+    </div>
+
+    <div class="article-body">
+      <p>O Portal24H entrou em contato com as autoridades responsáveis, que confirmaram estar cientes do material mas pediram <strong>discrição nas investigações</strong>. A recomendação é que as pessoas não compartilhem o vídeo em grupos de família ou com menores de idade.</p>
+      <p>Ainda não há previsão de quando o caso será esclarecido. Acompanhe o Portal24H para as últimas atualizações sobre esse assunto que está chocando o Brasil.</p>
+    </div>
+
+    <div class="comments">
+      <div class="comment-title">💬 3.241 Comentários</div>
+      <div class="comment">
+        <div class="comment-avatar"><img src="https://i.pravatar.cc/38?img=11" /></div>
+        <div class="comment-body"><div class="comment-name">Marcos Oliveira</div><div class="comment-time">Há 12 minutos</div><div class="comment-text">Meu Deus eu não tô acreditando que isso aconteceu... Mandei pro meu grupo de família e todo mundo ficou em choque 😱</div></div>
+      </div>
+      <div class="comment">
+        <div class="comment-avatar"><img src="https://i.pravatar.cc/38?img=25" /></div>
+        <div class="comment-body"><div class="comment-name">Carla Mendes</div><div class="comment-time">Há 34 minutos</div><div class="comment-text">Assisti e me arrependi. Não tem como desver isso. Cuidado quem for assistir com crianças por perto 😬</div></div>
+      </div>
+      <div class="comment">
+        <div class="comment-avatar"><img src="https://i.pravatar.cc/38?img=57" /></div>
+        <div class="comment-body"><div class="comment-name">Rafael_SP</div><div class="comment-time">Há 51 minutos</div><div class="comment-text">Acabei de ver. Eu avisei pra todo mundo aqui... PREPARA O CORAÇÃO antes de clicar kkkk</div></div>
+      </div>
+      <div class="comment">
+        <div class="comment-avatar"><img src="https://i.pravatar.cc/38?img=33" /></div>
+        <div class="comment-body"><div class="comment-name">Ana Paula Freitas</div><div class="comment-time">Há 1 hora</div><div class="comment-text">Tentei não assistir mas a curiosidade foi mais forte kkkkk mas ó... não esperava por isso não 😂</div></div>
+      </div>
+    </div>
+  </main>
+
+  <aside class="sidebar">
+    <div class="sidebar-block">
+      <div class="sidebar-title">🔥 Mais Lidas Agora</div>
+      <div class="sidebar-item" onclick="ir()">
+        <img src="https://picsum.photos/seed/sid1/72/56" />
+        <div class="sidebar-item-text"><div class="sidebar-item-cat">Polêmicas</div>Famosa é flagrada em situação que deixou fãs sem reação</div>
+      </div>
+      <div class="sidebar-item" onclick="ir()">
+        <img src="https://picsum.photos/seed/sid2/72/56" />
+        <div class="sidebar-item-text"><div class="sidebar-item-cat">Brasil</div>Câmera de segurança registra o inacreditável em posto de gasolina</div>
+      </div>
+      <div class="sidebar-item" onclick="ir()">
+        <img src="https://picsum.photos/seed/sid3/72/56" />
+        <div class="sidebar-item-text"><div class="sidebar-item-cat">Vídeos</div>"Não consigo parar de assistir" — vídeo quebra recordes em 6 horas</div>
+      </div>
+      <div class="sidebar-item" onclick="ir()">
+        <img src="https://picsum.photos/seed/sid4/72/56" />
+        <div class="sidebar-item-text"><div class="sidebar-item-cat">Urgente</div>Imagens exclusivas: o momento exato que ninguém esperava ver</div>
+      </div>
+    </div>
+    <div class="sidebar-block">
+      <div class="sidebar-title">📺 Vídeos em Alta</div>
+      <div class="sidebar-item" onclick="ir()">
+        <img src="https://picsum.photos/seed/sid5/72/56" />
+        <div class="sidebar-item-text"><div class="sidebar-item-cat">Viral</div>Esse vídeo foi removido 3 vezes — mas voltou</div>
+      </div>
+      <div class="sidebar-item" onclick="ir()">
+        <img src="https://picsum.photos/seed/sid6/72/56" />
+        <div class="sidebar-item-text"><div class="sidebar-item-cat">Exclusivo</div>O que aconteceu depois foi ainda mais surpreendente</div>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  © 2026 Portal24H — Todos os direitos reservados &nbsp;|&nbsp; Política de Privacidade &nbsp;|&nbsp; Termos de Uso<br>
+  <span style="color:#333">As notícias publicadas neste portal são de responsabilidade de seus respectivos autores.</span>
+</footer>
+
+<script>
+  function ir() {
+    window.location.href = "https://youtu.be/L7ejl_Hj3A8?si=TtPPS1zJkutU_QB0";
+  }
+</script>
+
+</body>
+</html>
